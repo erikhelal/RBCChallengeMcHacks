@@ -6166,6 +6166,8 @@ button.close {
   align-items: flex-start;
   justify-content: space-between;
   padding: 1.25rem;
+  padding-bottom: 0;
+  padding-top: 0.9rem;
   border-bottom: 0 solid #e9ecef;
   border-top-left-radius: 0.4375rem;
   border-top-right-radius: 0.4375rem;
@@ -6177,6 +6179,7 @@ button.close {
 }
 
 .modal-title {
+  font-size: 1.8rem;
   margin-bottom: 0;
   line-height: 1.1;
 }
@@ -6184,7 +6187,9 @@ button.close {
 .modal-body {
   position: relative;
   flex: 1 1 auto;
-  padding: 1.5rem;
+  padding-top: 0;
+  margin-left: 1.2rem;
+  font-size: 1.7rem;
 }
 
 .modal-footer {
@@ -6213,7 +6218,8 @@ button.close {
 
 @media (min-width: 576px) {
   .modal-dialog {
-    max-width: 500px;
+    width: 90%;
+    height: 90%;
     margin: 1.75rem auto;
   }
 
