@@ -6158,7 +6158,6 @@ button.close {
   outline: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 74em;
 }
 
 .modal-backdrop {
@@ -6239,8 +6238,6 @@ button.close {
 
 @media (min-width: 576px) {
   .modal-dialog {
-    width: 90%;
-    height: 90%;
     margin: 1.75rem auto;
   }
 
