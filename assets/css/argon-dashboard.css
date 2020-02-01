@@ -1983,8 +1983,9 @@ pre code {
 }
 
 .table-responsive {
+  float: right;
   display: block;
-  width: 100%;
+  width: 50%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -20672,6 +20673,11 @@ pre>code.highlight {
 
 .ct-footer-links li+li {
   margin-left: 1rem;
+}
+
+.card.home-modal {
+  width: 10rem;
+  height: 10rem;
 }
 
 /*# sourceMappingURL=dashboard-free.css.map */
