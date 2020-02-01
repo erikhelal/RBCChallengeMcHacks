@@ -20,10 +20,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>
-    Argon Dashboard - Free Dashboard for Bootstrap 4 by Creative Tim
+    RBC 2050 - Dashboard
   </title>
   <!-- Favicon -->
-  <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <link href="./assets/rbc_logo_rectangle.svg" rel="icon" type="image/png">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <!-- Icons -->
@@ -42,7 +42,7 @@
       </button>
       <!-- Brand -->
       <a class="navbar-brand pt-0" href="./index.html">
-        <img src="./assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+        <img src="./assets/rbc_logo_rectangle.svg" class="navbar-brand-img" alt="...">
       </a>
       <!-- User -->
       <ul class="nav align-items-center d-md-none">
@@ -67,7 +67,7 @@
           </a>
           <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
             <div class=" dropdown-header noti-title">
-              <h6 class="text-overflow m-0">Welcome!</h6>
+              <h6 class="text-overflow m-0">Welcome, John Doe!</h6>
             </div>
             <a href="./examples/profile.html" class="dropdown-item">
               <i class="ni ni-single-02"></i>
@@ -100,7 +100,7 @@
           <div class="row">
             <div class="col-6 collapse-brand">
               <a href="./index.html">
-                <img src="./assets/img/brand/blue.png">
+                <img src="./assets/rbc_logo_rectangle.svg">
               </a>
             </div>
             <div class="col-6 collapse-close">
@@ -132,7 +132,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link " data-toggle = "modal" data-target="#interacModal">
-              <i class="ni ni-send text-blue"></i> Interac Etransfer
+              <i class="ni ni-send text-blue"></i> Interac eTransfer
             </a>
           </li>
           
@@ -183,9 +183,9 @@
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
       <div class="container-fluid">
         <!-- Brand -->
-        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./index.html">Welcome!</a>
+        <a class="h4 mb-0 text-dark text-uppercase d-none d-lg-inline-block" href="./index.html">Welcome, John Doe!</a>
         <!-- Form -->
-        <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+        <form class="navbar-search navbar-search-muted form-inline mr-3 d-none d-md-flex ml-lg-auto">
           <div class="form-group mb-0">
             <div class="input-group input-group-alternative">
               <div class="input-group-prepend">
@@ -204,14 +204,14 @@
     <!-- End Navbar -->
 
     <!-- Header -->
-    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+    <div class="header bg-default pb-8 pt-5 pt-md-8">
       <div class="container-fluid">
           <!-- INTERAC Modal -->
-            <div class="modal" id="interacModal" tabindex="-1" role="dialog" aria-labelledby="interacModalLabel" aria-hidden="true">
+            <div class="modal" style="max-width:800px;margin-left:auto;margin-right:auto;" id="interacModal" tabindex="-1" role="dialog" aria-labelledby="interacModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h4 class="modal-title " id="interacModalLabel"><center>Send an Interac Etransfer</center></h4>
+                    <h4 class="modal-title " id="interacModalLabel"><img style="width:35px;padding-bottom:8px;padding-right:10px" src="./assets/interac_logo.svg"/>Send an Interac eTransfer</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -220,24 +220,24 @@
                     <form>
                         <div class="col-md-12">
                           <div class="form-group">
-                          <div class="text-muted mb-4">
-                            <small>Sender</small>
+                          <div class="text-muted mb-2 mt-2" >
+                            <div class="tiny">SENDER</div>
                           </div>
-                            <input type="text" placeholder="Sender" class="form-control form-control-alternative" />
-                          </div>
-                        </div>
-                        <div class="col-md-12">
-                          <div class="form-group">
-                          <div class="text-muted mb-4">
-                            <small>Account</small>
-                          </div>
-                            <input type="email" class="form-control form-control-alternative" id="exampleFormControlInput1" placeholder="Choose account...">
+                            <input type="text" disabled="true" value="John Doe" class="form-control form-control-alternative" />
                           </div>
                         </div>
                         <div class="col-md-12">
                           <div class="form-group">
-                          <div class="text-muted mb-4">
-                              <small>Recipient</small>
+                          <div class="text-muted mb-2" >
+                            <div class="tiny">ACCOUNT</div>
+                          </div>
+                            <input type="email" class="form-control form-control-alternative" id="exampleFormControlInput1" placeholder="Choose an account">
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                          <div class="text-muted mb-2" >
+                            <div class="tiny">RECIPIENT</div>
                               </div>
                             <div class="input-group input-group-alternative mb-4">
                               <div class="input-group-prepend">
@@ -250,8 +250,8 @@
                         </div>
                         <div class="col-md-12">
                           <div class="form-group">
-                          <div class="text-muted mb-4">
-                            <small>Amount</small>
+                          <div class="text-muted mb-2" >
+                            <div class="tiny">AMOUNT</div>
                           </div>
                             <div class="input-group input-group-alternative mb-4">
                               <input class="form-control" placeholder="0.00$" type="text">
@@ -265,10 +265,9 @@
                      
                         <div class="col-md-12">
                           <div class="form-group ">
-                          <div class="text-muted mb-4">
-                            <small>Message</small>
-                          </div>
-                            <input type="text" placeholder="Message..." class="form-control form-control-alternative " />
+                          <div class="text-muted mb-2" >
+                            <div class="tiny">MESSAGE</div>                          </div>
+                            <input type="text" placeholder="Message for recipient" class="form-control form-control-alternative " />
                           </div>
                         </div>
                         
@@ -289,7 +288,7 @@
             }
             </script>
         <div class="header-body">
-        <h4 class="text-white text-uppercase">   Bank Accounts <i class="ni ni-bold-down " onclick="other()"></i></h4>
+        <h4 class="text-muted text-uppercase">   Bank Accounts <i class="ni ni-bold-down " onclick="other()"></i></h4>
           <!-- bank account cards row -->
           <div class="row">
             <div class="col-xl-5 col-lg-6">
@@ -301,7 +300,7 @@
                       <span class="h2 font-weight-bold mb-0">1,460 $</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
                         <i class="fas fa-money-bill"></i>
                       </div>
                     </div>
@@ -324,7 +323,239 @@
                             </button>
                           </div>
                           <div class="modal-body">
-                            ...
+                            $100.64
+                            <div class="table-responsive">
+                              <div>
+                              <table class="table align-items-center">
+                                  <thead class="thead-light">
+                                      <tr>
+                                          <th scope="col">
+                                              Project
+                                          </th>
+                                          <th scope="col">
+                                              Budget
+                                          </th>
+                                          <th scope="col">
+                                              Status
+                                          </th>
+                                          <th scope="col">
+                                              Completion
+                                          </th>
+                                          <th scope="col"></th>
+                                      </tr>
+                                  </thead>
+                                  <tbody class="list">
+                                      
+                                      <tr>
+                                          <th scope="row" class="name">
+                                              <div class="media align-items-center">
+                                                  <div class="media-body">
+                                                      <span class="mb-0 text-sm">Argon Design System</span>
+                                                  </div>
+                                              </div>
+                                          </th>
+                                          <td class="budget">
+                                              $2500 USD
+                                          </td>
+                                          <td class="status">
+                                              <span class="badge badge-dot mr-4">
+                                                <i class="bg-warning"></i> pending
+                                              </span>
+                                          </td>
+                                          <td class="completion">
+                                              <div class="d-flex align-items-center">
+                                                  <span class="mr-2">60%</span>
+                                                  <div>
+                                                      <div class="progress">
+                                                          <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                          <td class="text-right">
+                                              <div class="dropdown">
+                                                  <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                  </a>
+                                                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                      <a class="dropdown-item" href="#">Action</a>
+                                                      <a class="dropdown-item" href="#">Another action</a>
+                                                      <a class="dropdown-item" href="#">Something else here</a>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      
+                                      <tr>
+                                          <th scope="row" class="name">
+                                              <div class="media align-items-center">
+                                                  <div class="media-body">
+                                                      <span class="mb-0 text-sm">Angular Now UI Kit PRO</span>
+                                                  </div>
+                                              </div>
+                                          </th>
+                                          <td class="budget">
+                                              $1800 USD
+                                          </td>
+                                          <td class="status">
+                                              <span class="badge badge-dot mr-4">
+                                                <i class="bg-success"></i> completed
+                                              </span>
+                                          </td>
+                                          <td class="completion">
+                                              <div class="d-flex align-items-center">
+                                                  <span class="mr-2">100%</span>
+                                                  <div>
+                                                      <div class="progress">
+                                                          <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                          <td class="text-right">
+                                              <div class="dropdown">
+                                                  <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                  </a>
+                                                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                      <a class="dropdown-item" href="#">Action</a>
+                                                      <a class="dropdown-item" href="#">Another action</a>
+                                                      <a class="dropdown-item" href="#">Something else here</a>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      
+                                      <tr>
+                                          <th scope="row" class="name">
+                                              <div class="media align-items-center">
+                                                  <div class="media-body">
+                                                      <span class="mb-0 text-sm">Black Dashboard</span>
+                                                  </div>
+                                              </div>
+                                          </th>
+                                          <td class="budget">
+                                              $3150 USD
+                                          </td>
+                                          <td class="status">
+                                              <span class="badge badge-dot mr-4">
+                                                <i class="bg-yellow"></i> delayed
+                                              </span>
+                                          </td>
+                                          <td class="completion">
+                                              <div class="d-flex align-items-center">
+                                                  <span class="mr-2">72%</span>
+                                                  <div>
+                                                      <div class="progress">
+                                                          <div class="progress-bar bg-yellow" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 72%;"></div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                          <td class="text-right">
+                                              <div class="dropdown">
+                                                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                      <a class="dropdown-item" href="#">Action</a>
+                                                      <a class="dropdown-item" href="#">Another action</a>
+                                                      <a class="dropdown-item" href="#">Something else here</a>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      
+                                      <tr>
+                                          <th scope="row" class="name">
+                                              <div class="media align-items-center">
+                                                  <div class="media-body">
+                                                      <span class="mb-0 text-sm">React Material Dashboard</span>
+                                                  </div>
+                                              </div>
+                                          </th>
+                                          <td class="budget">
+                                              $4400 USD
+                                          </td>
+                                          <td class="status">
+                                              <span class="badge badge-dot mr-4">
+                                                <i class="bg-info"></i> on schedule
+                                              </span>
+                                          </td>
+                                          <td class="completion">
+                                              <div class="d-flex align-items-center">
+                                                  <span class="mr-2">90%</span>
+                                                  <div>
+                                                      <div class="progress">
+                                                          <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                          <td class="text-right">
+                                              <div class="dropdown">
+                                                  <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                  </a>
+                                                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                      <a class="dropdown-item" href="#">Action</a>
+                                                      <a class="dropdown-item" href="#">Another action</a>
+                                                      <a class="dropdown-item" href="#">Something else here</a>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      
+                                      <tr>
+                                          <th scope="row" class="name">
+                                              <div class="media align-items-center">
+                                                  <div class="media-body">
+                                                      <span class="mb-0 text-sm">Vue Paper UI Kit PRO</span>
+                                                  </div>
+                                              </div>
+                                          </th>
+                                          <td class="budget">
+                                              $2200 USD
+                                          </td>
+                                          <td class="status">
+                                              <span class="badge badge-dot mr-4">
+                                                <i class="bg-success"></i> completed
+                                              </span>
+                                          </td>
+                                          <td class="completion">
+                                              <div class="d-flex align-items-center">
+                                                  <span class="mr-2">100%</span>
+                                                  <div>
+                                                      <div class="progress">
+                                                          <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                          <td class="text-right">
+                                              <div class="dropdown">
+                                                  <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                  </a>
+                                                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                      <a class="dropdown-item" href="#">Action</a>
+                                                      <a class="dropdown-item" href="#">Another action</a>
+                                                      <a class="dropdown-item" href="#">Something else here</a>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      
+                                  </tbody>
+                              </table>
+                          </div>
+                          
+                          </div>
+
+                          <div class="card"> 
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                          </div>
+                          
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -345,7 +576,7 @@
                       <span class="h2 font-weight-bold mb-0">1,460 $</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
                         <i class="fas fa-money-bill"></i>
                       </div>
                     </div>
@@ -389,7 +620,7 @@
                       <span class="h2 font-weight-bold mb-0">3,605 $</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
                         <i class="fas fa-money-bill-alt"></i>
                       </div>
                     </div>
@@ -447,7 +678,7 @@
           </div>
         </div>
         <br>
-        <h4 class="text-white text-uppercase"> Credit Cards<i class="ni ni-bold-down "></i></h4>
+        <h4 class="text-muted text-uppercase"> Credit Cards<i class="ni ni-bold-down "></i></h4>
           <!-- bank account cards row -->
           <div class="row">
             <div class="col-xl-5 col-lg-6">
@@ -459,7 +690,7 @@
                       <span class="h2 font-weight-bold mb-0">860 $</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
                         <i class="fas fa-credit-card"></i>
                       </div>
                     </div>
@@ -504,7 +735,7 @@
                       <span class="h2 font-weight-bold mb-0">1,450 $</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
                         <i class="fas fa-credit-card"></i>
                       </div>
                     </div>
@@ -563,7 +794,7 @@
           </div>
         <br>
         <!-- PIGGY BANKS -->
-        <h4 class="text-white text-uppercase"> Piggy Banks  <i class="ni ni-bold-down "></i></h4>
+        <h4 class="text-muted text-uppercase"> Piggy Banks  <i class="ni ni-bold-down "></i></h4>
         <!-- piggy bank rows-->
         <div class="row">
         <div class="col-xl-5 col-lg-6">
@@ -575,7 +806,7 @@
                       <span class="h2 font-weight-bold mb-0">2,001 $</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
                         <i class="fas fa-car"></i>
                       </div>
                     </div>
@@ -624,7 +855,7 @@
                       <span class="h2 font-weight-bold mb-0">3,605 $</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
                         <i class="fas fa-plane"></i>
                       </div>
                     </div>
@@ -687,7 +918,7 @@
         </div>
 
         <br>
-        <h4 class="text-white text-uppercase"> Saving & Investment Accounts <i class="ni ni-bold-down "></i></h4>
+        <h4 class="text-muted text-uppercase"> Savings & Investment Accounts <i class="ni ni-bold-down "></i></h4>
         <!-- savings and investments row-->
         <div class="row">
         <div class="col-xl-5 col-lg-6">
@@ -699,7 +930,7 @@
                       <span class="h2 font-weight-bold mb-0">1,460 $</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
                         <i class="fas fa-money-bill-wave"></i>
                       </div>
                     </div>
@@ -743,7 +974,7 @@
                       <span class="h2 font-weight-bold mb-0">3,605 $</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
                         <i class="fas fa-money-bill-wave-alt"></i>
                       </div>
                     </div>
