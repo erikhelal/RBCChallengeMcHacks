@@ -6177,6 +6177,7 @@ button.close {
 }
 
 .modal-title {
+  font-size: 1.8rem;
   margin-bottom: 0;
   line-height: 1.1;
 }
