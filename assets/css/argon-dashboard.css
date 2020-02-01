@@ -1985,7 +1985,8 @@ pre code {
 .table-responsive {
   float: right;
   display: block;
-  width: 50%;
+  width: 70%;
+  padding-top: 1.5em;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -4969,6 +4970,7 @@ input[type="button"].btn-block {
 
 .card-title {
   margin-bottom: 1.25rem;
+
 }
 
 .card-subtitle {
@@ -6141,7 +6143,6 @@ button.close {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
@@ -6149,6 +6150,9 @@ button.close {
   border-radius: 0.4375rem;
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.2), 0 5px 15px rgba(0, 0, 0, 0.17);
   outline: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 74em;
 }
 
 .modal-backdrop {
@@ -20682,9 +20686,18 @@ pre>code.highlight {
   margin-left: 1rem;
 }
 
-.card.home-modal {
-  width: 10rem;
-  height: 10rem;
+.card.home-modal, .card.home-modal>.card-body {
+  width: 15rem;
 }
+
+.card.home-modal>.card-body>* {
+  text-align: center;
+}
+
+.card.home-modal{
+  margin-bottom: 2em;
+}
+
+
 
 /*# sourceMappingURL=dashboard-free.css.map */
