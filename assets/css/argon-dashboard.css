@@ -1994,6 +1994,16 @@ pre code {
 .table-responsive {
   float: right;
   display: block;
+  width: 100%;
+  padding-top: 0em;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.table-responsive.modalTable {
+  float: right;
+  display: block;
   width: 70%;
   padding-top: 0em;
   overflow-x: auto;
