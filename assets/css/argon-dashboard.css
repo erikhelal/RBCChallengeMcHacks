@@ -481,6 +481,12 @@ small,
   font-weight: 400;
 }
 
+.tiny {
+  font-size: 50%;
+  font-weight: 600;
+}
+
+
 mark,
 .mark {
   padding: 0.2em;
@@ -1983,8 +1989,10 @@ pre code {
 }
 
 .table-responsive {
+  float: right;
   display: block;
-  width: 100%;
+  width: 70%;
+  padding-top: 1.5em;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -4968,6 +4976,7 @@ input[type="button"].btn-block {
 
 .card-title {
   margin-bottom: 1.25rem;
+
 }
 
 .card-subtitle {
@@ -6149,6 +6158,9 @@ button.close {
   width: 90em;
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.2), 0 5px 15px rgba(0, 0, 0, 0.17);
   outline: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 74em;
 }
 
 .modal-backdrop {
@@ -6173,18 +6185,21 @@ button.close {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 1.25rem;
+  padding: 2rem;
+  padding-bottom: 0;
+  padding-top: 1.5rem;
   border-bottom: 0 solid #e9ecef;
   border-top-left-radius: 0.4375rem;
   border-top-right-radius: 0.4375rem;
 }
 
 .modal-header .close {
-  padding: 1.25rem;
+  padding: 2rem;
   margin: -1.25rem -1.25rem -1.25rem auto;
 }
 
 .modal-title {
+  font-size: 1.8rem;
   margin-bottom: 0;
   line-height: 1.1;
 }
@@ -6192,14 +6207,19 @@ button.close {
 .modal-body {
   position: relative;
   flex: 1 1 auto;
-  padding: 1.5rem;
+  padding-top: 0;
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  font-size: 1.7rem;
 }
 
 .modal-footer {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 1.5rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   border-top: 0 solid #e9ecef;
 }
 
@@ -6221,7 +6241,8 @@ button.close {
 
 @media (min-width: 576px) {
   .modal-dialog {
-    max-width: 500px;
+    width: 90%;
+    height: 90%;
     margin: 1.75rem auto;
   }
 
@@ -6884,6 +6905,10 @@ button.bg-warning:focus {
 
 .bg-danger {
   background-color: #f5365c !important;
+}
+
+.bg-yellow {
+  background-color: #FEDF01 !important;
 }
 
 a.bg-danger:hover,
@@ -16863,7 +16888,6 @@ textarea[resize="horizontal"] {
 .navbar-vertical .navbar-brand-img,
 .navbar-vertical .navbar-brand>img {
   max-width: 100%;
-  max-height: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -17044,10 +17068,10 @@ textarea[resize="horizontal"] {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-
+/* 
 .navbar-vertical.navbar-expand-xs .navbar-brand-img {
   max-height: 2.5rem;
-}
+} */
 
 .navbar-vertical.navbar-expand-xs .navbar-user {
   margin-left: -1.5rem;
@@ -17153,10 +17177,10 @@ textarea[resize="horizontal"] {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-
+/* 
   .navbar-vertical.navbar-expand-sm .navbar-brand-img {
     max-height: 2.5rem;
-  }
+  } */
 
   .navbar-vertical.navbar-expand-sm .navbar-user {
     margin-left: -1.5rem;
@@ -17263,10 +17287,10 @@ textarea[resize="horizontal"] {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-
+/* 
   .navbar-vertical.navbar-expand-md .navbar-brand-img {
     max-height: 2.5rem;
-  }
+  } */
 
   .navbar-vertical.navbar-expand-md .navbar-user {
     margin-left: -1.5rem;
@@ -17373,10 +17397,10 @@ textarea[resize="horizontal"] {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-
+/* 
   .navbar-vertical.navbar-expand-lg .navbar-brand-img {
     max-height: 2.5rem;
-  }
+  } */
 
   .navbar-vertical.navbar-expand-lg .navbar-user {
     margin-left: -1.5rem;
@@ -17483,10 +17507,10 @@ textarea[resize="horizontal"] {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-
+/* 
   .navbar-vertical.navbar-expand-xl .navbar-brand-img {
     max-height: 2.5rem;
-  }
+  } */
 
   .navbar-vertical.navbar-expand-xl .navbar-user {
     margin-left: -1.5rem;
@@ -20675,5 +20699,19 @@ pre>code.highlight {
 .ct-footer-links li+li {
   margin-left: 1rem;
 }
+
+.card.home-modal, .card.home-modal>.card-body {
+  width: 15rem;
+}
+
+.card.home-modal>.card-body>* {
+  text-align: center;
+}
+
+.card.home-modal{
+  margin-bottom: 2em;
+}
+
+
 
 /*# sourceMappingURL=dashboard-free.css.map */
