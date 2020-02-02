@@ -20725,11 +20725,24 @@ pre>code.highlight {
   text-align: center;
 }
 
-.card.home-modal{
-  margin-bottom: 2em;
+.card.home-modal {
+  margin-bottom: 1em;
   margin-right: 25em;
 }
 
+p.card-title {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
 
+.card-text.positive {
+  font-weight:700;
+  color: darkgreen;
+}
+
+.card-text.negative {
+  font-weight:700;
+  color: red;
+}
 
 /*# sourceMappingURL=dashboard-free.css.map */
