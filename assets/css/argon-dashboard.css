@@ -20737,12 +20737,12 @@ p.card-title {
 
 .card-text.positive {
   font-weight:700;
-  color: darkgreen;
+  color: rgb(104, 177, 9);
 }
 
 .card-text.negative {
   font-weight:700;
-  color: red;
+  color: #F78000;
 }
 
 /*# sourceMappingURL=dashboard-free.css.map */
