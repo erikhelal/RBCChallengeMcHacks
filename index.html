@@ -382,12 +382,61 @@
             <!-- end of global payment modal-->
            
             <script>
-            function other(){
-              document.getElementById("example").removeAttribute("hidden");
+            function bankArrowChange(){
+              document.getElementById("otherbank").removeAttribute("hidden");
+
+              if(document.getElementById("bankarrow").className== "ni ni-bold-down"){
+                document.getElementById("bankarrow").className= "ni ni-bold-up";
+              }
+              else{
+                document.getElementById("bankarrow").className= "ni ni-bold-down"
+                document.getElementById("otherbank").setAttribute("hidden","true");
+              }
+                
             }
+            function creditArrowChange(){
+              document.getElementById("othercredit").removeAttribute("hidden");
+
+              if(document.getElementById("creditarrow").className== "ni ni-bold-down"){
+                document.getElementById("creditarrow").className= "ni ni-bold-up";
+              }
+              else{
+                document.getElementById("creditarrow").className= "ni ni-bold-down"
+                document.getElementById("othercredit").setAttribute("hidden","true");
+              }
+                
+            }
+            function piggyArrowChange(){
+              document.getElementById("otherpiggy").removeAttribute("hidden");
+              document.getElementById("otherpiggy1").removeAttribute("hidden");
+
+              if(document.getElementById("piggyarrow").className== "ni ni-bold-down"){
+                document.getElementById("piggyarrow").className= "ni ni-bold-up";
+              }
+              else{
+                document.getElementById("piggyarrow").className= "ni ni-bold-down"
+                document.getElementById("otherpiggy").setAttribute("hidden","true");
+                document.getElementById("otherpiggy1").setAttribute("hidden","true");
+              }
+                
+            }function savingsArrowChange(){
+              document.getElementById("savings2").removeAttribute("hidden");
+              document.getElementById("investment").removeAttribute("hidden");
+
+              if(document.getElementById("savingsarrow").className== "ni ni-bold-down"){
+                document.getElementById("savingsarrow").className= "ni ni-bold-up";
+              }
+              else{
+                document.getElementById("savingsarrow").className= "ni ni-bold-down"
+                document.getElementById("savings2").setAttribute("hidden","true");
+                document.getElementById("investment").setAttribute("hidden","true");
+              }
+                
+            }
+
             </script>
         <div class="header-body">
-        <h4 class="text-muted text-uppercase">   Bank Accounts <i class="ni ni-bold-down " onclick="other()"></i></h4>
+        <h4 class="text-muted text-uppercase">   Bank Accounts <i class="ni ni-bold-down " id="bankarrow" onclick="bankArrowChange()"></i></h4>
           <!-- bank account cards row -->
           <div class="row">
             <div class="col-xl-5 col-lg-6">
@@ -648,10 +697,31 @@
                           
                           </div>
 
-                          <div class="card"> 
+                          <div class="card home-modal"> 
                             <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <p class="card-title">30-Day Net Change</p>
+                              <div class="card-div">
+                                <span class="card-text">+$50.67</span>
+                                <br>
+                              </div>  
+                            </div>
+                          </div>
+
+                          <div class="card home-modal"> 
+                            <div class="card-body">
+                              <p class="card-title">Largest Revenue</p>
+                              <div class='card-text'>
+                                <span class="card-text">test</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card home-modal"> 
+                            <div class="card-body">
+                              <p class="card-title">Largest Expense</p>
+                              <div class='card-text'>
+                                <span class="card-text">test</span>
+                              </div>
                             </div>
                           </div>
                           
@@ -774,10 +844,56 @@
                 </div>
               </div>
             </div>
+            <div class="col-xl-5 col-lg-6" id = "otherbank" hidden>
+            <br>
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Chequing Account </h5>
+                      <span class="h2 font-weight-bold mb-0">3,970 $</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                        <i class="fas fa-money-bill"></i>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <br>
+                  <!-- Button trigger modal for CHEQUING ACCOUNT -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#chequingModal">
+                      Chequing modal
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="chequingModal" tabindex="-1" role="dialog" aria-labelledby="chequingModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="chequingModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            ...
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
           </div>
+          
         </div>
         <br>
-        <h4 class="text-muted text-uppercase"> Credit Cards<i class="ni ni-bold-down "></i></h4>
+        <h4 class="text-muted text-uppercase"> Credit Cards<i id = "creditarrow" class="ni ni-bold-down" onclick="creditArrowChange()"></i></h4>
           <!-- bank account cards row -->
           <div class="row">
             <div class="col-xl-5 col-lg-6">
@@ -889,11 +1005,58 @@
                   
                 </div>
               </div>
+              
+            </div>
+            <br>
+            <div class="col-xl-5 col-lg-6" id="othercredit" hidden>
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Visa Credit Card 2</h5>
+                      <span class="h2 font-weight-bold mb-0">543 $</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                        <i class="fas fa-credit-card"></i>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <br>
+                  <!-- Button trigger modal for CHEQUING ACCOUNT 2 -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#chequing2Modal">
+                      Chequing2 modal
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="chequing2Modal" tabindex="-1" role="dialog" aria-labelledby="chequing2ModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="chequing2ModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            ...
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                </div>
+              </div>
             </div>
           </div>
         <br>
         <!-- PIGGY BANKS -->
-        <h4 class="text-muted text-uppercase"> Piggy Banks  <i class="ni ni-bold-down "></i></h4>
+        <h4 class="text-muted text-uppercase"> Piggy Banks  <i id="piggyarrow" class="ni ni-bold-down " onclick="piggyArrowChange()"></i></h4>
         <!-- piggy bank rows-->
         <div class="row">
         <div class="col-xl-5 col-lg-6">
@@ -1013,11 +1176,110 @@
                 </div>
               </div>
             </div>
+            <br>
+          <div class="row">
+            <div class="col-xl-5 col-lg-6" hidden id="otherpiggy">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">New Clothes Fund</h5>
+                      <span class="h2 font-weight-bold mb-0">150 $</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                        <i class="fas fa-tshirt"></i>
+                      </div>
+                    </div>
+                    <!-- Button trigger modal for PIGGY BANK -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#carModal">
+                      Clothes
+                    </button>
 
+                    <!-- Modal -->
+                    <div class="modal fade" id="carModal" tabindex="-1" role="dialog" aria-labelledby="carModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="carModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            ...
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <p class="mt-3 mb-0  text-sm">
+                    <div class="progress">
+                      <div class="progress-bar bg-info" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
+                    </div>
+
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-5 col-lg-6" hidden id="otherpiggy1">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">New Bike</h5>
+                      <span class="h2 font-weight-bold mb-0">250 $</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                        <i class="fas fa-bicycle"></i>
+                      </div>
+                    </div>
+                    <!-- Button trigger modal for clothes piggy bank -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#thailandModal">
+                      bike modal
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="thailandModal" tabindex="-1" role="dialog" aria-labelledby="thailandModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="thailandModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            ...
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <p class="mt-3 mb-0 text-muted text-sm">
+                    <div class="progress">
+                      <div class="progress-bar bg-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                    </div>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <br>
-        <h4 class="text-muted text-uppercase"> Savings & Investment Accounts <i class="ni ni-bold-down "></i></h4>
+        <h4 class="text-muted text-uppercase"> Savings & Investment Accounts <i id="savingsarrow" onclick="savingsArrowChange()" class="ni ni-bold-down "></i></h4>
         <!-- savings and investments row-->
         <div class="row">
         <div class="col-xl-5 col-lg-6">
@@ -1064,12 +1326,12 @@
                 </div>
               </div>
             </div>
+
             <div class="col-xl-5 col-lg-6">
               <div class="card card-stats mb-4 mb-xl-0">
                 <div class="card-body">
                   <div class="row">
-                    <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">RRSP</h5>
+                    <div class="col"><h5 class="card-title text-uppercase text-muted mb-0">RRSP</h5>
                       <span class="h2 font-weight-bold mb-0">3,605 $</span>
                     </div>
                     <div class="col-auto">
@@ -1127,6 +1389,101 @@
                   
                 </div>
               </div>
+            </div>
+            </div>
+            <br>
+            <div class="row">
+            <div class="col-xl-5 col-lg-6" hidden id="savings2">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Investment Funds</h5>
+                      <span class="h2 font-weight-bold mb-0">1,460 $</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                        <i class="fas fa-money-bill-wave"></i>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <br>
+                  <!-- Button trigger modal for CHEQUING ACCOUNT -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#savingsModal">
+                      Chequing modal
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="savingsModal" tabindex="-1" role="dialog" aria-labelledby="savingsModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="savingsModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            ...
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-5 col-lg-6" hidden id="investment">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">401K </h5>
+                      <span class="h2 font-weight-bold mb-0">3,605 $</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                        <i class="fas fa-money-bill-wave-alt"></i>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <br>
+                  <!-- Button trigger modal for CHEQUING ACCOUNT 2 -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tfsaModal">
+                      Chequing2 modal
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="tfsaModal" tabindex="-1" role="dialog" aria-labelledby="tfsaModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="tfsaModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            ...
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            
+
+            <br>
+            </div>
             </div>
         </div>
       </div>
