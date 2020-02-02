@@ -6158,7 +6158,7 @@ button.close {
   outline: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 74em;
+  border-radius: 2em 2em 2em 2em;
 }
 
 .modal-backdrop {
@@ -6239,8 +6239,6 @@ button.close {
 
 @media (min-width: 576px) {
   .modal-dialog {
-    width: 90%;
-    height: 90%;
     margin: 1.75rem auto;
   }
 
@@ -20700,6 +20698,9 @@ pre>code.highlight {
 
 .card.home-modal, .card.home-modal>.card-body {
   width: 15rem;
+  border-radius: 0.5em;
+  border-width: 0.08em;
+  border-color: lightblue;
 }
 
 .card.home-modal>.card-body>* {
